@@ -13,8 +13,7 @@ const Pagination = props => {
           <li
             key={page}
             className={page === currentPage ? "page-item active" : "page-iem"}
-            onClick={() => onPageChange(page)}
-          >
+            onClick={() => onPageChange(page)}>
             <a className="page-link" href="#">
               {page}
             </a>
@@ -24,7 +23,7 @@ const Pagination = props => {
     </nav>
   );
 };
-pagination.propTypes = {
+Pagination.propTypes = {
   itemsCount: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
